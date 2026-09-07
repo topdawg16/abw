@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link rel="icon" href="logo.png" type="image/x-icon">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,13 +24,17 @@
       <span></span><span></span><span></span>
     </button>
     <div class="nav-links">
+      <button class="nav-close" type="button" aria-label="Close menu" onclick="document.querySelector('.nav-links').classList.remove('open')">&times;</button>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#abw">Properties</a>
       <a href="#facilities">Facilities</a>
       <a href="#amenities">Amenities</a>
       <a href="#contact">Contact</a>
-      <a href="#contact" class="btn btn-dark">Book a Space</a>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" onclick="toggleTheme()">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+        <span class="theme-label">Dark mode</span>
+      </button>
     </div>
   </nav>
 </header>
@@ -51,7 +56,7 @@
 <!-- ABOUT -->
 <section id="about">
   <div class="wrap about-grid">
-    <img class="about-img" src="images/FRONTVV.jpg" alt="ABW Properties Limited building">
+    <img class="about-img" src="images/frontview.jpeg" alt="ABW Properties Limited building">
     <div class="about-text">
       <div class="section-head" style="margin-bottom:20px;">
         <div class="kicker">About the company</div>
@@ -76,16 +81,7 @@
       <h2>Our services</h2>
       <p>Reliable real estate services for businesses, owners and investors, delivered with care and clarity.</p>
     </div>
-    <div class="service-reference-grid" aria-label="Service highlights">
-      <figure class="service-reference">
-        <img src="screen8.PNG" alt="ABW Properties services including office leasing, property sales, property and facilities management, and security management">
-        <figcaption>Our core property services</figcaption>
-      </figure>
-      <figure class="service-reference">
-        <img src="screen7.PNG" alt="ABW Properties services including facilities management, security, maintenance, and tenant support">
-        <figcaption>Support that keeps buildings working</figcaption>
-      </figure>
-    </div>
+  
     <div class="service-cards">
       <article class="service-card">
         <span class="service-icon icon-office" aria-hidden="true">+</span>
@@ -124,9 +120,7 @@
 <!-- VISION AND MISSION -->
 <section class="vision-section">
   <div class="wrap vision-grid">
-    <div class="vision-image-wrap">
-      <img class="vision-image" src="WhatsApp Image 2026-09-05 at 12.46.09.jpeg" alt="ABW Properties vision and mission presentation">
-    </div>
+  
     <div class="vision-copy">
       <div class="kicker">Our direction</div>
       <h2>Built on service, security and trust.</h2>
@@ -202,9 +196,7 @@
         <li>Professional, courteous on-site management</li>
       </ul>
     </div>
-    <div class="amenities-reference">
-      <img src="screen9.PNG" alt="ABW Properties amenities and standards">
-    </div>
+  
   </div>
 </section>
 
@@ -254,6 +246,11 @@
       <img class="facility-img" src="images/officespace.jpg" alt="ABW office space">
       <img class="facility-img" src="images/lounge.jpeg" alt="ABW lounge">
       <img class="facility-img" src="images/FRONTVV.jpg" alt="ABW Properties Limited exterior">
+     <img class="facility-img" src="images/1 (1).jpeg" alt="ABW Properties Limited exterior">
+     <img class="facility-img" src="images/1 (2).jpeg" alt="ABW Properties Limited exterior">
+     <img class="facility-img" src="images/1 (3).jpeg" alt="ABW Properties Limited exterior">
+     <img class="facility-img" src="images/1 (4).jpeg" alt="ABW Properties Limited exterior">
+
     </div>
   </div>
 </section>
@@ -317,6 +314,29 @@
     <div class="footer-note">© 2026 ABW Properties Limited. All rights reserved.</div>
   </div>
 </footer>
+
+<script>
+  const savedTheme = localStorage.getItem('abw-theme');
+  if (savedTheme === 'dark') document.documentElement.dataset.theme = 'dark';
+
+  function toggleTheme() {
+    const isDark = document.documentElement.dataset.theme === 'dark';
+    document.documentElement.dataset.theme = isDark ? 'light' : 'dark';
+    localStorage.setItem('abw-theme', isDark ? 'light' : 'dark');
+    updateThemeToggle(!isDark);
+  }
+
+  function updateThemeToggle(isDark) {
+    const toggle = document.querySelector('.theme-toggle');
+    if (!toggle) return;
+    toggle.setAttribute('aria-pressed', String(isDark));
+    toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    toggle.querySelector('.theme-icon').textContent = isDark ? '☀' : '☾';
+    toggle.querySelector('.theme-label').textContent = isDark ? 'Light mode' : 'Dark mode';
+  }
+
+  updateThemeToggle(savedTheme === 'dark');
+</script>
 
 </body>
 </html>
