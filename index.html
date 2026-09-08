@@ -33,7 +33,6 @@
       <a href="#contact">Contact</a>
       <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" onclick="toggleTheme()">
         <span class="theme-icon" aria-hidden="true">☾</span>
-        <span class="theme-label">Dark mode</span>
       </button>
     </div>
   </nav>
@@ -332,7 +331,6 @@
     toggle.setAttribute('aria-pressed', String(isDark));
     toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
     toggle.querySelector('.theme-icon').textContent = isDark ? '☀' : '☾';
-    toggle.querySelector('.theme-label').textContent = isDark ? 'Light mode' : 'Dark mode';
   }
 
   updateThemeToggle(savedTheme === 'dark');

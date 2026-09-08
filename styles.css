@@ -75,7 +75,7 @@
     background:var(--brass);transition:width .25s ease;
   }
   .nav-links a:hover::after{width:100%;}
-  .theme-toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;
+  .theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;padding:0;
     border:1px solid var(--line);border-radius:999px;background:transparent;
     color:var(--ink);font:500 13px 'Inter',sans-serif;cursor:pointer;
     transition:background .25s ease,color .25s ease,border-color .25s ease;}
