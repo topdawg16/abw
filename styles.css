@@ -3,8 +3,8 @@
   --cream:#FFFFFF;
   --brass:#8BD13F;
   --brass-light:#B0E66A;
-  --green:#666666;
-  --green-light:#7A7A7A;
+  --green:#8BD13F;
+  --green-light:#666666;
   --muted:#808080;
   --line:rgba(128,128,128,0.22);
   --header-bg:rgba(255,255,255,0.92);
@@ -253,7 +253,7 @@
     --cream:#4A4A4A;
     --brass:#8BD13F;
     --brass-light:#B0E66A;
-    --green:#4A4A4A;
+    --green:#8BD13F;
     --green-light:#666666;
     --muted:#D0D0D0;
     --line:rgba(255,255,255,.2);
