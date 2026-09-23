@@ -353,7 +353,8 @@
 
 <script>
   const savedTheme = localStorage.getItem('abw-theme');
-  if (savedTheme === 'dark') document.documentElement.dataset.theme = 'dark';
+  const isDarkByDefault = savedTheme !== 'light';
+  document.documentElement.dataset.theme = isDarkByDefault ? 'dark' : 'light';
 
   function toggleTheme() {
     const isDark = document.documentElement.dataset.theme === 'dark';
@@ -370,7 +371,7 @@
     toggle.querySelector('.theme-icon').textContent = isDark ? '☀' : '☾';
   }
 
-  updateThemeToggle(savedTheme === 'dark');
+  updateThemeToggle(isDarkByDefault);
 </script>
 
 </body>
