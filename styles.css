@@ -265,7 +265,7 @@
     color:var(--cream);font-family:'Inter',sans-serif;font-size:15px;padding:12px 2px;
   }
   form input::placeholder, form textarea::placeholder{color:rgba(247,245,240,0.45);}
-  form select option{color:var(--ink);}
+  form select option{color:#12181B;background:#FFFFFF;}
   form label{font-size:13px;color:rgba(247,245,240,0.6);margin-bottom:-8px;}
   form button{margin-top:12px;align-self:flex-start;}
   .map-wrap{margin-top:64px;}
