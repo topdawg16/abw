@@ -219,6 +219,8 @@
   .space-card .body{text-align:center;}
   .abw > .wrap{text-align:center;}
   .abw-cta{margin-top:44px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:center;}
+  .abw-cta .btn-outline{background:#12181B;color:var(--cream);border-color:#12181B;}
+  .abw-cta .btn-outline:hover{background:var(--brass);color:var(--cream);border-color:var(--brass);}
 
   /* WHY CHOOSE US */
   .why-section{background:#090F0D;color:var(--cream);}
