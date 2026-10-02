@@ -220,7 +220,7 @@
   .abw > .wrap{text-align:center;}
   .abw-cta{margin-top:44px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:center;}
   .abw-cta .btn-outline{background:#12181B;color:#F7F5F0;border-color:#12181B;}
-  .abw-cta .btn-outline:hover{background:var(--brass);color:var(--cream);border-color:var(--brass);}
+  .abw-cta .btn-outline:hover{background:var(--green);color:#F7F5F0;border-color:var(--green);}
 
   /* WHY CHOOSE US */
   .why-section{background:#090F0D;color:var(--cream);}
