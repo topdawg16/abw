@@ -88,6 +88,7 @@
   }
   .btn-dark{background:var(--ink);color:var(--cream);border-color:var(--ink);}
   .btn-dark:hover{background:transparent;color:var(--ink);}
+  .hero-ctas .btn:not(.btn-dark):hover{background:var(--ink);color:var(--cream);border-color:var(--ink);}
   .btn-outline{border-color:var(--cream);color:var(--cream);}
   .btn-outline:hover{background:var(--cream);color:var(--ink);}
   .btn-brass{background:var(--brass);color:var(--cream);border-color:var(--brass);}
